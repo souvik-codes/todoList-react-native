@@ -50,7 +50,7 @@ export default function App() {
       {/* Write a task */}
       {/* Uses a keyboard avoiding view which ensures the keyboard does not cover the items on screen */}
       <KeyboardAvoidingView 
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        behavior={Platform.OS === "android" ? "height" : "padding"}
         style={styles.writeTaskWrapper}
       >
         <TextInput style={styles.input} placeholder={'Write a task'} value={task} onChangeText={text => setTask(text)} />
